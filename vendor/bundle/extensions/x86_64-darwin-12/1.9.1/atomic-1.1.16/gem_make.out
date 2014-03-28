@@ -1,0 +1,16 @@
+/Users/cameronjackson1/.rvm/rubies/ruby-1.9.3-p484/bin/ruby extconf.rb 
+checking for libkern/OSAtomic.h... yes
+creating Makefile
+
+make  clean
+
+make
+compiling atomic_reference.c
+atomic_reference.c: In function 'ir_compare_and_set':
+atomic_reference.c:57:60: warning: passing argument 3 of 'OSAtomicCompareAndSwap64' from incompatible pointer type [enabled by default]
+/usr/include/libkern/OSAtomic.h:476:9: note: expected 'volatile int64_t *' but argument is of type 'void **'
+linking shared-object atomic_reference.bundle
+
+make  install
+/usr/bin/install -c -m 0755 atomic_reference.bundle /Users/cameronjackson1/Github/smith_music/vendor/bundle/gems/atomic-1.1.16/ext/.gem.20140328-21248-9t9wc0
+installing default atomic_reference libraries

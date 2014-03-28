@@ -1,0 +1,12 @@
+/Users/cameronjackson1/.rvm/rubies/ruby-1.9.3-p484/bin/ruby extconf.rb 
+creating Makefile
+
+make  clean
+
+make
+compiling parser.c
+linking shared-object json/ext/parser.bundle
+
+make  install
+/usr/bin/install -c -m 0755 parser.bundle /Users/cameronjackson1/Github/smith_music/vendor/bundle/gems/json-1.8.1/ext/json/ext/parser/.gem.20140328-21248-1mt9ffg/json/ext
+installing default parser libraries
