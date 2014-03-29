@@ -35,6 +35,11 @@ end
 # Use ActiveModel has_secure_password
  gem 'bcrypt', '~> 3.1.7'
 
+# Fancy google charts
+gem "googlecharts", :require => "gchart"
+
+
+
 # Use unicorn as the app server
 # gem 'unicorn'
 

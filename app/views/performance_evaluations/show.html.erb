@@ -1,0 +1,14 @@
+<h2>Performance Evaluation for <%= @performance.student_firstname %> <%= @performance.student_lastname %></h2>
+
+
+	<h1><%= @performance.lesson_name %></h1>
+
+	<p>
+		<strong>Points:</strong> <%= @performance.point %>
+		<br>
+		<strong>Comment:</strong> <%= @performance.comment %>
+	</p>
+	
+
+
+<%= link_to 'Back to All Performance Evaluations', performance_evaluations_path %> | <%= link_to 'Edit Evaluation', edit_performance_evaluation_path(@performance) %>

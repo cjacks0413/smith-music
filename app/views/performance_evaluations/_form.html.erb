@@ -1,0 +1,32 @@
+<%= form_for @performance do |f| %>
+  <p>  
+    <%= f.label :teacher_firstname %><br />  
+    <%= f.text_field :teacher_firstname %>  
+  </p>  
+  <p>  
+    <%= f.label :teacher_lastname %><br />  
+    <%= f.text_field :teacher_lastname %>  
+  </p>  
+   <p>  
+    <%= f.label :student_firstname %><br />  
+    <%= f.text_field :student_firstname %>  
+  </p>  
+   <p>  
+    <%= f.label :student_lastname %><br />  
+    <%= f.text_field :student_lastname %>  
+  </p>  
+    <p>  
+    <%= f.label :lesson_name %><br />  
+    <%= f.text_field :lesson_name %>  
+  </p>  
+   <p>  
+    <%= f.label :point %><br />  
+    <%= f.number_field :point %>  
+  </p>  
+   <p>  
+    <%= f.label :comment %><br />  
+    <%= f.text_field :comment %>  
+  </p>  
+  
+  <%= f.submit %>
+<% end %>  

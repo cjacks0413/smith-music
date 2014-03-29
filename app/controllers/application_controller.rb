@@ -29,5 +29,14 @@ end
   
 def current_user?
       current_user.present?
-    end
+end
+
+#def can_create_event!
+ # return if current_user.role == 'admin'
+ # flash[:alert] = "Please sign in to view that resource!"
+ # redirect_to login_url
+#end
+
+
+
 end

@@ -1,9 +1,14 @@
 SmithMusic::Application.routes.draw do
+  get "performance_evaluations/new"
+    get "performance_evaluations/show"
+
+  get "performance_evaluations/index"
+  get "progress/index"
   get "events/new"
   resources :users
   resources :events
+  resources :performance_evaluations
 
-  
   get "sessions/new"
   resources :users, only: [:new, :create]
     resources :sessions, only: [ :create]
