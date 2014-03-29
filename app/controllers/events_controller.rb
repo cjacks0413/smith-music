@@ -1,5 +1,4 @@
 class EventsController < ApplicationController
-<<<<<<< HEAD
 	def index
   	 	@date = params[:date] ? Date.parse(params[:date]) : Date.today
   	 	@events = Event.all 
@@ -34,13 +33,4 @@ class EventsController < ApplicationController
 			params.require(:event).permit(:title, :start_time, :end_time, :student_id)
 		end 
 		
-=======
-
-	before_action :can_create_event!
-	#before_action :user_logged_in!
-
-	def index
-
-	end
->>>>>>> bbc70b9168002e413cce08c7908a17464364552d
 end

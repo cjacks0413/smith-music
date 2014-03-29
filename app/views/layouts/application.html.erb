@@ -11,6 +11,7 @@
 	<div class="container">
 	<% if current_user.present? %>
 		Welcome <%= current_user.user_name %>! | <%= link_to 'Sign out', logout_path %>
+		| <%= link_to 'Evaluations', performance_evaluations_path %>| <%= link_to 'New Lesson', new_event_path %> 
 	<% else %>
 		<%= link_to 'Register', new_user_path %> | <%= link_to 'Sign in', login_path %>
 	<% end %>
