@@ -1,0 +1,8 @@
+<%= simple_form_for(@event) do |f| %> 
+	<%= f.input :title, label: "Title" %> <br/>
+	<%= f.input :start_time, label: "Start Time/Day" %>  <br/>
+	<%= f.input :end_time, label: "End Time/Day" %> <br/>
+	<%= f.input :present, as: :select, collection: [['Present', true], ['Absent', false]] %> <br/>	
+	<%= f.input :notes, as: :text, label: "Notes" %>  <br/>
+	<%= f.button :submit %> <br/>
+<% end %> 

@@ -13,9 +13,12 @@
 </div>
  <div id="cal-day">
  		<%= calendar @date do |d| %> 
- 			<%= link_to d.day, new_event_path %>
- 			<% if d == Date.parse('2014-02-25') %> <br/> 
- 				<%= link_to "Lesson with Sally", event_path(Event.find(2)) %> 
+ 			<%= link_to d.day, events_path %>
+ 			<% if d == Date.parse('2014-03-25') %> <br/> 
+ 				<%= link_to "Lesson with Lan", event_path(Event.find(2)) %> 
  			<% end %> 
+ 			<% if d == Date.parse('2014-03-14') %> <br/>
+ 				<%= link_to "Lesson with Compost", event_path(Event.find(3)) %> 
+ 			<% end %>
 	<% end %> 
 </div>

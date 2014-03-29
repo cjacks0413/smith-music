@@ -16,7 +16,7 @@
 						Absent
 						<% end %> 
 		</td> 
-		<td>Notes: <%= @event.notes %> </td>
+		<td id="notes-id">Notes: <%= @event.notes %> </td>
 	</tr>
 </table>
-<%= link_to "Edit", '#' %> 
+<%= link_to "Edit", edit_event_path(@event) %> 

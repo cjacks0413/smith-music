@@ -5,7 +5,9 @@
           
         <div id="navigation">
         <ul>
-          <li id="first"><%= link_to "Home", root_path %></li>
+          <li id="first">
+          <%if current_user? %> <%= link_to "Home", events_path %> 
+          <% else %> <%= link_to "Home", root_path %> <% end %>
           <li><%= link_to "Logout", logout_path %></a></li>
          
         </ul>
