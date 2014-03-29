@@ -26,6 +26,11 @@
 <%= f.password_field :password_confirmation %>
 
 </div>
+
+<div>
+<%= select(:user, :role, [['Admin', 'admin'], ['Student', 'student'], ['Teacher', 'teacher']]) %>
+</div>
+
 <%= f.submit %>
 
   <% end %>  

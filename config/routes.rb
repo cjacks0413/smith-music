@@ -1,4 +1,5 @@
 SmithMusic::Application.routes.draw do
+  get "events/new"
   resources :users
   resources :events
 

@@ -1,5 +1,28 @@
 <h1>W.O. Smith School of Music</h1>
-<p>Stuff</p>
+
+<% if current_user? %>
+
+
+
+
+
+
+
+
+
+
+<% if current_user.role == 'admin' %>
+
+<%= link_to 'New Event', new_event_path %>
+
+<% end %>
+
+
+
+
+<% end %>
+
+
 
 
 
