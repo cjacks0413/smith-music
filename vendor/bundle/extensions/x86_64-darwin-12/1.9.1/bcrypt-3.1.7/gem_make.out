@@ -1,0 +1,17 @@
+/Users/cameronjackson1/.rvm/rubies/ruby-1.9.3-p484/bin/ruby extconf.rb 
+checking for ruby/util.h... yes
+creating Makefile
+
+make  clean
+
+make
+compiling bcrypt_ext.c
+compiling crypt.c
+compiling crypt_blowfish.c
+compiling crypt_gensalt.c
+compiling wrapper.c
+linking shared-object bcrypt_ext.bundle
+
+make  install
+/usr/bin/install -c -m 0755 bcrypt_ext.bundle /Users/cameronjackson1/Github/smith_music/vendor/bundle/gems/bcrypt-3.1.7/ext/mri/.gem.20140328-25359-ahce5
+installing default bcrypt_ext libraries

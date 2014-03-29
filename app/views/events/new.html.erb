@@ -1,3 +1,8 @@
-<div class="modal" id="newEventModal">
-    Test Content
-</div>
+<%= simple_form_for(@event) do |f| %> 
+	<%= f.input :title, label: "Title" %>
+
+	<%= f.input :start_time, label: "Start Time/Day" %> 
+	<%= f.input :end_time, label: "End Time/Day" %> 
+	<%= f.input :student_id, label: "Student Username" %> 
+	<%= f.button :submit %> 
+<% end %> 
