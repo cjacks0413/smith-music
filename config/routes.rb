@@ -1,7 +1,14 @@
 SmithMusic::Application.routes.draw do
   get "calendar/show"
+  get "performance_evaluations/new"
+  get "performance_evaluations/show"
+
+  get "performance_evaluations/index"
+  get "progress/index"
+  get "events/new"
   resources :users
   resources :events
+  resources :performance_evaluations
 
   resource :calendar, only: [:show], controller: :calendar
   

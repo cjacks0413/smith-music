@@ -5,6 +5,12 @@ class ApplicationController < ActionController::Base
 	helper_method :current_user, :current_user?
 
 
+def user_logged_in!
+  return if current_user.present?
+  flash[:alert] = "Please sign in to view that resource!"
+  redirect_to login_url
+end
+
 def sign_in(user)
 	session[:user_id] = user.id if user.present?
 end
@@ -24,5 +30,12 @@ end
 def current_user?
   current_user.present?
 end   
+
+
+#def can_create_event!
+ # return if current_user.role == 'admin'
+ # flash[:alert] = "Please sign in to view that resource!"
+ # redirect_to login_url
+#end
 
 end

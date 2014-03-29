@@ -1,5 +1,33 @@
 <h1>W.O. Smith School of Music</h1>
-<p>Stuff</p>
+
+
+
+<img src="<%=Gchart.line(:data => [0, 40, 10, 70, 20])%>"/>
+
+
+
+<% if current_user? %>
+
+
+
+
+
+
+
+
+
+<% if current_user.role == 'admin' %>
+
+<%= link_to 'New Event', new_event_path %>
+
+<% end %>
+
+
+
+
+<% end %>
+
+
 
 
 

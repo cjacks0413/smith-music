@@ -1,0 +1,67 @@
+<h1>Performance Evaluations</h1>
+
+
+
+<% if current_user? && @performances%>
+
+
+
+<% if current_user.role == 'teacher' %>
+	<%= link_to 'Evaluate student\'s performance ', new_performance_evaluation_path %>
+	<br/>
+	<br/>
+		<table>
+			<tr>
+				<th>Student's First Name</th>
+				<th>Student's Last Name</th>
+				<th>Lesson</th>
+				<th>Points Awarded</th>
+				<th>Comment</th>
+			</tr>
+			<% @performances.each do |performance| %> 
+			<tr>
+				<td><%= performance.student_firstname %></td>
+				<td><%= performance.student_lastname%></td>
+				<td><%= performance.lesson_name %></td>
+				<td><%= performance.point %></td>
+				<td><%= performance.comment %></td>
+				<td><%= link_to 'Show', performance %></td>
+				<td><%= link_to 'Update', edit_performance_evaluation_path(performance) %></td>
+				<td><%= link_to 'Delete', performance_evaluation_path(performance), method: :delete, data: {confirm: 'Are you sure?'} %></td>
+			</tr>
+			<% end %>
+		</table>
+
+<% else %>
+	<% if current_user.role == 'student' %>
+	<%= link_to 'View all my performance evaluations', index_performance_evaluation_path %>
+		<% end %>
+
+	<% if current_user.role == 'parent' %>
+	<%= link_to 'View all your child"s performance evaluations', index_performance_evaluation_path %>
+	<% end %>
+	<br/>
+	<br/>
+	<table>
+			<tr>
+				<th>Teacher's First name</th>
+				<th>Teacher's Last name</th>
+				<th>Lesson Name</th>
+				<th>Points Awarded</th>
+				<th>Teacher's Comment</th>
+			</tr>
+			<% @performances.each do |performance| %>
+			<tr>
+				<td><%= performance.teacher_firstname %></td>
+				<td><%= performance.teacher_lastname%></td>
+				<td><%= performance.lesson_name %></td>
+				<td><%= performance.point %></td>
+				<td><%= performance.comment %></td>
+			</tr>
+			<% end %>
+	</table>
+<% end %>
+
+
+
+<% end %>
