@@ -1,31 +1,24 @@
-<h1>Users#new</h1>
-  
+<h1>Welcome! </h1>
+<div class="form-horizontal">  
 <%= form_for @user do |f| %>  
- <div>
-<%= f.label :firstname %> <br/>
-<%= f.text_field :firstname %>
+	<%= f.label :first_name %> <br/>
+	<%= f.text_field :firstname %>
 
-</div>
- <div>
-<%= f.label :lastname %> <br/>
-<%= f.text_field :lastname %>
+	<%= f.label :last_name %> <br/>
+	<%= f.text_field :lastname %>
 
-</div>
-  <div>
-<%= f.label :user_name %> <br/>
-<%= f.text_field :user_name %>
+	<%= f.label :user_name %> <br/>
+	<%= f.text_field :user_name %>
 
-</div>
-<div>
-<%= f.label :password %> <br/>
-<%= f.password_field :password %>
+	<%= f.label :password %> <br/>
+	<%= f.password_field :password %>
 
-</div>
-<div>
-<%= f.label :password_confirmation %> <br/>
-<%= f.password_field :password_confirmation %>
+	<%= f.label :password_confirmation %> <br/>
+	<%= f.password_field :password_confirmation %>
 
-</div>
-<%= f.submit %>
 
-  <% end %>  
+	<%= select(:user, :role, [['Teacher', 'teacher'], ['Parent', 'parent'], ['Student', 'student']]) %> <br/>
+	<%= f.submit %>
+
+	<% end %>  
+</div> 

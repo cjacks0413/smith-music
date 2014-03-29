@@ -4,10 +4,10 @@ class UsersController < ApplicationController
   end
 
 
-    def create  
+  def create  
     @user = User.new(user_params)  
     if @user.save  
-      redirect_to root_url, :notice => "Signed up!"  
+      redirect_to @user, :notice => "Signed up!"  
       sign_in @user
       session[:user_id] = @user.id
 
@@ -15,6 +15,12 @@ class UsersController < ApplicationController
       render "new"  
     end  
   end  
+
+  def show
+    @user = User.find(params[:id]) 
+    @date = params[:date] ? Date.parse(params[:date]) : Date.today
+    @events = @user.events 
+  end 
 
   private
 

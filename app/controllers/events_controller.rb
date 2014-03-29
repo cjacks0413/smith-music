@@ -2,7 +2,7 @@ class EventsController < ApplicationController
 	def index
   	 	@date = params[:date] ? Date.parse(params[:date]) : Date.today
   	 	@events = Event.all 
-  	 	@events_by_date = @events.group_by(&:date)
+  	 	@events_by_date = @events.group_by(&:start_time)
 	end 
 
 	def new
@@ -10,14 +10,23 @@ class EventsController < ApplicationController
 	end 
 
 	def create
-		@event = Event.new(event_params)
+		@user = current_user
+		@event = @user.events.build(event_params)
 		if @event.save
-			redirect_to index
+			redirect_to @event 
 		else 
 			render 'new'
 		end
 	end
 
+	def show
+		@event = Event.find(params[:id])
+
+	end 
+
+	def edit
+	end 
+	
 	private
 
 		def event_params

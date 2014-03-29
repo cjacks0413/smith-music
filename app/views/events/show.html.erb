@@ -1,0 +1,22 @@
+<h1><%= @event.title %></h1> 
+
+<table>
+	<tr>
+		<td>Start Time: <%= @event.start_time.to_formatted_s %></td>
+		<td>End Time: <%= @event.end_time.to_formatted_s %></td>
+	</tr>
+	<tr>
+		<td>Instructor: <%= @event.user.firstname %></td>
+		<td>Student: My Student </td>
+	</tr>
+	<tr>
+		<td>Attendance: <% if @event.present? %> 
+						Present 
+						<% else %> 
+						Absent
+						<% end %> 
+		</td> 
+		<td>Notes: <%= @event.notes %> </td>
+	</tr>
+</table>
+<%= link_to "Edit", '#' %> 

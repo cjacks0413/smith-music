@@ -12,5 +12,4 @@ def user_name=(value)
 
 end
 
-
 end
