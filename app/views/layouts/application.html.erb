@@ -7,6 +7,14 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+<% if current_user.present? %>
+Welcome <%= current_user.user_name %>! | <%= link_to 'Sign out', logout_path %>
+<% else %>
+<%= link_to 'Register', new_user_path %> | <%= link_to 'Sign in', login_path %>
+<% end %>
+
+<%= notice %>
+<%= alert %>
 
 <%= yield %>
 
