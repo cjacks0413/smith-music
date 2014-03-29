@@ -1,6 +1,10 @@
 SmithMusic::Application.routes.draw do
+  get "calendar/show"
   resources :users
   resources :events
+
+  resource :calendar, only: [:show], controller: :calendar
+  #root to: "calendar#show"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
