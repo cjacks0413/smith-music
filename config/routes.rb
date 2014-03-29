@@ -5,6 +5,7 @@ SmithMusic::Application.routes.draw do
   get "performance_evaluations/index"
   get "progress/index"
   get "events/new"
+  resources :progress
   resources :users
   resources :events
   resources :performance_evaluations

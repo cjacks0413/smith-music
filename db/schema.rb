@@ -36,17 +36,6 @@ ActiveRecord::Schema.define(version: 20140329084105) do
     t.datetime "updated_at"
   end
 
-  create_table "performance_feedbacks", force: true do |t|
-    t.string   "teacher_firstname"
-    t.string   "teacher_lastname"
-    t.string   "student_firstname"
-    t.string   "student_lastname"
-    t.integer  "point"
-    t.text     "comment"
-    t.string   "lesson_name"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
 
   create_table "users", force: true do |t|
     t.string   "firstname"

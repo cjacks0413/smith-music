@@ -34,11 +34,11 @@
 
 <% else %>
 	<% if current_user.role == 'student' %>
-	<%= link_to 'View all my performance evaluations', index_performance_evaluation_path %>
+	<%= link_to 'View all my performance evaluations', performance_evaluation_path %>
 		<% end %>
 
 	<% if current_user.role == 'parent' %>
-	<%= link_to 'View all your child"s performance evaluations', index_performance_evaluation_path %>
+	<%= link_to 'View all your child"s performance evaluations', performance_evaluation_path %>
 	<% end %>
 	<br/>
 	<br/>

@@ -1,2 +1,13 @@
-<h1>Progress#index</h1>
-<p>Find me in app/views/progress/index.html.erb</p>
+<h1>Progress</h1>
+
+<p> Points Chart </p>
+
+
+<%= @progress_chart %>
+
+<img src="<%=Gchart.pie(:title => "Points chart", :data => [ @a[10],@a[9],@a[8],@a[7],@a[6],@a[5],@a[4],@a[3],@a[2],@a[1],@a[0]], :size => '600x400', :labels => ["10 Points", "9 Points", "8 Points", "7 Points","6 Points", "5 Points","4 Points", "3 Points","2 Points", "1 Point","0 Point"]) %>"/>
+
+<p> Attendance Chart </p>
+
+
+
